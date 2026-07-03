@@ -68,4 +68,5 @@ vcpkg_installed/
 Testing/
 .cache/
 
-logo_uncrop.png # un-rounded local copy of logo
+# un-rounded local copy of logo
+logo_uncrop.png 
