@@ -1,0 +1,208 @@
+{
+    "geode": "5.7.1",
+    "gd": {
+        "win": "2.2081",
+        "mac": "2.2081",
+        "android": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "nazarhk.custom_death_sounds",
+    "name": "Custom Death Sounds",
+    "version": "v1.0.0",
+    "developer": "NazarHK",
+    "description": "Change death sound to your own - separately for different objects",
+    "early-load": true,
+    "dependencies": {
+        "geode.node-ids": {
+            "version": "v1.10.0",
+            "importance": "required"
+        }
+    },
+    "tags": [
+        "offline",
+        "utility",
+        "customization"
+    ],
+    "settings": {
+        "enable-custom-sounds": {
+            "type": "bool",
+            "name": "Enable Custom Death Sounds",
+            "description": "Toggle custom death sounds",
+            "default": true
+        },
+        "spike-use-folder": {
+            "type": "bool",
+            "name": "Use random sounds from folder (Spike)",
+            "description": "When enabled, uses random sounds from config/nazarhk.custom_death_sounds/Sounds/Spike/ folder",
+            "default": false
+        },
+        "spike-sound": {
+            "type": "file",
+            "name": "Spike (single file)",
+            "description": "Pick a single custom sound for spike death",
+            "default": "",
+            "control": {
+                "filters": [
+                    {
+                        "files": ["*.mp3", "*.wav", "*.ogg", "*.flac"],
+                        "description": "Audio Files"
+                    }
+                ]
+            }
+        },
+        "spike-volume": {
+            "type": "int",
+            "name": "Spike Volume (%)",
+            "default": 100,
+            "min": 0,
+            "max": 100,
+            "control": { "slider": true }
+        },
+        "spike-pitch-min": {
+            "type": "int",
+            "name": "Spike Pitch Min (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "spike-pitch-max": {
+            "type": "int",
+            "name": "Spike Pitch Max (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "block-use-folder": {
+            "type": "bool",
+            "name": "Use random sounds from folder (Block)",
+            "description": "When enabled, uses random sounds from config/nazarhk.custom_death_sounds/Sounds/Block/ folder",
+            "default": false
+        },
+        "block-sound": {
+            "type": "file",
+            "name": "Block (single file)",
+            "description": "Pick a single custom sound for block crush death",
+            "default": "",
+            "control": {
+                "filters": [
+                    {
+                        "files": ["*.mp3", "*.wav", "*.ogg", "*.flac"],
+                        "description": "Audio Files"
+                    }
+                ]
+            }
+        },
+        "block-volume": {
+            "type": "int",
+            "name": "Block Volume (%)",
+            "default": 100,
+            "min": 0,
+            "max": 100,
+            "control": { "slider": true }
+        },
+        "block-pitch-min": {
+            "type": "int",
+            "name": "Block Pitch Min (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "block-pitch-max": {
+            "type": "int",
+            "name": "Block Pitch Max (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "other-use-folder": {
+            "type": "bool",
+            "name": "Use random sounds from folder (Other)",
+            "description": "When enabled, uses random sounds from config/nazarhk.custom_death_sounds/Sounds/Other/ folder",
+            "default": false
+        },
+        "other-sound": {
+            "type": "file",
+            "name": "Other (single file)",
+            "description": "Pick a single custom sound for other death causes (slopes, orbs, etc)",
+            "default": "",
+            "control": {
+                "filters": [
+                    {
+                        "files": ["*.mp3", "*.wav", "*.ogg", "*.flac"],
+                        "description": "Audio Files"
+                    }
+                ]
+            }
+        },
+        "other-volume": {
+            "type": "int",
+            "name": "Other Volume (%)",
+            "default": 100,
+            "min": 0,
+            "max": 100,
+            "control": { "slider": true }
+        },
+        "other-pitch-min": {
+            "type": "int",
+            "name": "Other Pitch Min (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "other-pitch-max": {
+            "type": "int",
+            "name": "Other Pitch Max (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "level-complete-use-folder": {
+            "type": "bool",
+            "name": "Use random sounds from folder (Level Complete)",
+            "description": "When enabled, uses random sounds from config/nazarhk.custom_death_sounds/Sounds/LevelComplete/ folder",
+            "default": false
+        },
+        "level-complete-sound": {
+            "type": "file",
+            "name": "Level Complete Sound (single file)",
+            "description": "Pick a single custom sound for level complete",
+            "default": "",
+            "control": {
+                "filters": [
+                    {
+                        "files": ["*.mp3", "*.wav", "*.ogg", "*.flac"],
+                        "description": "Audio Files"
+                    }
+                ]
+            }
+        },
+        "level-complete-volume": {
+            "type": "int",
+            "name": "Level Complete Volume (%)",
+            "default": 100,
+            "min": 0,
+            "max": 100,
+            "control": { "slider": true }
+        },
+        "level-complete-pitch": {
+            "type": "int",
+            "name": "Level Complete Pitch (%)",
+            "default": 100,
+            "min": 50,
+            "max": 200,
+            "control": { "slider": true }
+        },
+        "keep-sound-on-reset": {
+            "type": "bool",
+            "name": "Keep sound on reset",
+            "description": "When enabled, custom death sounds won't be cleared when the level is reset",
+            "default": false
+        }
+    }
+}

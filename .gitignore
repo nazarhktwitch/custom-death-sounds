@@ -67,3 +67,5 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+logo_uncrop.png # un-rounded local copy of logo
